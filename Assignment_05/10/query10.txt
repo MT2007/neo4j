@@ -1,0 +1,2 @@
+MATCH (people:Person)-[relatedTo]-(mov :Movie {title: "Captain America"}) RETURN people, Type(relatedTo), relatedTo , mov
+

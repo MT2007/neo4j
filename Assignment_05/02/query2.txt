@@ -1,0 +1,4 @@
+MATCH (Hugo:Person {name: "Hugo Weaving"})-[:ACTED_IN]->(HugoMovies) RETURN Hugo,HugoMovies
+
+
+

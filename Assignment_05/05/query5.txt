@@ -1,0 +1,2 @@
+MATCH (m:Movie{title:"The Matrix"})<-[:ACTED_IN]-(Actors)-[:ACTED_IN]->(allmovies) RETURN Actors,m,allmovies
+
