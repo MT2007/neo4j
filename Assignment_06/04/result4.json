@@ -1,0 +1,202 @@
+﻿[
+  {
+    "a.name": "SAT",
+    "count(p)": 1
+  },
+  {
+    "a.name": "FLL",
+    "count(p)": 1
+  },
+  {
+    "a.name": "KOA",
+    "count(p)": 1
+  },
+  {
+    "a.name": "SMF",
+    "count(p)": 1
+  },
+  {
+    "a.name": "RIC",
+    "count(p)": 1
+  },
+  {
+    "a.name": "IND",
+    "count(p)": 1
+  },
+  {
+    "a.name": "MCI",
+    "count(p)": 1
+  },
+  {
+    "a.name": "MSN",
+    "count(p)": 1
+  },
+  {
+    "a.name": "BIL",
+    "count(p)": 1
+  },
+  {
+    "a.name": "ROC",
+    "count(p)": 1
+  },
+  {
+    "a.name": "CLT",
+    "count(p)": 1
+  },
+  {
+    "a.name": "DCA",
+    "count(p)": 1
+  },
+  {
+    "a.name": "PBI",
+    "count(p)": 1
+  },
+  {
+    "a.name": "MIA",
+    "count(p)": 1
+  },
+  {
+    "a.name": "MOB",
+    "count(p)": 1
+  },
+  {
+    "a.name": "SNA",
+    "count(p)": 2
+  },
+  {
+    "a.name": "LAS",
+    "count(p)": 2
+  },
+  {
+    "a.name": "ATL",
+    "count(p)": 2
+  },
+  {
+    "a.name": "CMH",
+    "count(p)": 2
+  },
+  {
+    "a.name": "SJC",
+    "count(p)": 2
+  },
+  {
+    "a.name": "LGA",
+    "count(p)": 2
+  },
+  {
+    "a.name": "TUS",
+    "count(p)": 2
+  },
+  {
+    "a.name": "SEA",
+    "count(p)": 3
+  },
+  {
+    "a.name": "PHX",
+    "count(p)": 3
+  },
+  {
+    "a.name": "SBN",
+    "count(p)": 3
+  },
+  {
+    "a.name": "MCO",
+    "count(p)": 4
+  },
+  {
+    "a.name": "PDX",
+    "count(p)": 4
+  },
+  {
+    "a.name": "BOS",
+    "count(p)": 4
+  },
+  {
+    "a.name": "DFW",
+    "count(p)": 4
+  },
+  {
+    "a.name": "SAN",
+    "count(p)": 4
+  },
+  {
+    "a.name": "BHM",
+    "count(p)": 4
+  },
+  {
+    "a.name": "CVG",
+    "count(p)": 4
+  },
+  {
+    "a.name": "ABQ",
+    "count(p)": 4
+  },
+  {
+    "a.name": "FAT",
+    "count(p)": 4
+  },
+  {
+    "a.name": "DLH",
+    "count(p)": 4
+  },
+  {
+    "a.name": "SLC",
+    "count(p)": 5
+  },
+  {
+    "a.name": "HNL",
+    "count(p)": 5
+  },
+  {
+    "a.name": "FSD",
+    "count(p)": 5
+  },
+  {
+    "a.name": "EWR",
+    "count(p)": 7
+  },
+  {
+    "a.name": "MOT",
+    "count(p)": 8
+  },
+  {
+    "a.name": "MSP",
+    "count(p)": 9
+  },
+  {
+    "a.name": "IAD",
+    "count(p)": 12
+  },
+  {
+    "a.name": "BNA",
+    "count(p)": 12
+  },
+  {
+    "a.name": "AZO",
+    "count(p)": 13
+  },
+  {
+    "a.name": "SFO",
+    "count(p)": 14
+  },
+  {
+    "a.name": "DEN",
+    "count(p)": 18
+  },
+  {
+    "a.name": "LAX",
+    "count(p)": 22
+  },
+  {
+    "a.name": "IAH",
+    "count(p)": 23
+  },
+  {
+    "a.name": "DTW",
+    "count(p)": 25
+  },
+  {
+    "a.name": "ORD",
+    "count(p)": 48
+  }
+]

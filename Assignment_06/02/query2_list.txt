@@ -1,0 +1,6 @@
+MATCH p=(a)-[road:trek*]->(c)
+where a.name='Darjeeling' and c.name='Sandakphu'
+WITH a, c , p, REDUCE(sum = 0, r IN road | sum + r.distance) AS dist
+ORDER BY dist
+RETURN a.name ,  c.name , dist
+

@@ -1,0 +1,35 @@
+MATCH p=shortestPath( (bacon:town {name:"Darjeeling"})-[*]-(meg:peak {name:"Sandakphu"}) ) RETURN p
+
+MATCH (source:town {name:"Darjeeling"}),
+      (destination:peak {name:"Sandakphu"})
+
+CALL gds.alpha.shortestPath.stream({
+  startNode: source,
+  endNode: destination,
+  nodeProjection: "*",
+  relationshipProjection: {
+    all: {
+      type: "*",
+      orientation:  "UNDIRECTED"
+    }
+  }
+})
+YIELD nodeId
+RETURN gds.util.asNode(nodeId).id AS place;
+
+
+
+MATCH (p1:town {name:"Darjeeling"}), (p2:peak {name:"Sandakphu"}),
+      path = shortestpath((p1)-[*]-(p2))
+RETURN path
+
+020202020202020
+MATCH (c1:town {name: "Darjeeling"}),
+  (c2:peak {name: "Sandakphu"}),
+  path = shortestpath((c1)-[road:trek*]-(c2))
+WITH path, REDUCE (sum = 0, r IN road | sum + r.distance) AS dist
+ORDER BY dist
+LIMIT 1
+RETURN path, dist
+
+

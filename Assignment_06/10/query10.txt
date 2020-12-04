@@ -1,0 +1,5 @@
+MATCH airport=(AStp:Airport)<-[:CHEAPEST_FLIGHT]-(AStrt:Airport)<-[:CHEAPEST_FLIGHT]-(AThird:Airport)  
+WITH airport, reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price) as cost 
+WHERE AStp <> AThird  
+RETURN airport, cost 
+ORDER BY cost LIMIT 1

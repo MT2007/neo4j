@@ -1,0 +1,8 @@
+MATCH (AStop:Airport)<-[:ORIGIN]-(flight:Flight)-[:DESTINATION]->(AStrt:Airport), (flight)<-[:ASSIGN]-(ticket:Ticket)
+WITH AStop, AStrt, flight, ticket  WHERE ticket.class = "business"
+CREATE (AStop)-[businessFlight:BUSINESS_FLIGHT {price: ticket.price, class:ticket.class, date: flight.date, duration: flight.duration, distance: flight.distance, airline:flight.airline}]->(AStrt)
+RETURN businessFlight;
+
+MATCH airport=(AStop:Airport{name: "DAY"})<-[businessFlight:BUSINESS_FLIGHT*1..10]-(AStrt:Airport {name: "LAX"}), (AStop:Airport)<-[:DESTINATION]-(), ()-[:ORIGIN]->(AStrt:Airport) 
+WITH airport,  reduce(totalDis=0, rel IN relationships(airport)|totalDis + rel.price) as cost 
+RETURN airport, cost ORDER BY cost LIMIT 1

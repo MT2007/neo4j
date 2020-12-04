@@ -1,0 +1,12 @@
+MATCH (str:Airport)<-[:ORIGIN]-(flight:Flight)-[:DESTINATION]->(stp:Airport), (flight)<-[:ASSIGN]-(ticket:Ticket)
+WITH str, stp, flight, min(ticket.price) as minimumPriceTicket
+MATCH (flight)<-[:ASSIGN]-(t:Ticket {price: minimumPriceTicket})
+WITH str, stp, flight, t
+CREATE (str)-[cheapestFlight:CHEAPEST_FLIGHT {price: t.price, class:t.class, date: flight.date, duration: flight.duration, distance: flight.distance, airline:flight.airline}]->(stp)
+RETURN cheapestFlight;
+
+
+MATCH p=(a:Airport)<-[:ORIGIN*]-(c:Flight)
+return a.name,count(p)
+order by count(p)
+

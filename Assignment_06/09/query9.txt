@@ -1,0 +1,4 @@
+MATCH airport=(AStp:Airport)<-[cheapestFlight:CHEAPEST_FLIGHT]-(AStrt:Airport) 
+WITH cheapestFlight, AStp.name + AStrt.name as special 
+RETURN  cheapestFlight.airline as flight,  count(DISTINCT special) AS number 
+ORDER BY number DESC

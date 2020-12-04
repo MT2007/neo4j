@@ -1,0 +1,3 @@
+MATCH airport=(airportStop:Airport)<-[cheapestFlight:CHEAPEST_FLIGHT*1..6]-(airportStart:Airport {name: "LAX"}), ()-[origin:ORIGIN]->(airportStart:Airport ) 
+WITH airport,airportStop, reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price) as cost WHERE cost < 3000  
+return distinct airportStop

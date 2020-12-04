@@ -1,0 +1,3 @@
+match p=shortestPath((a)-[r*]-(c))
+where a.name="Darjeeling" and c.name="Sandakphu" and all(x in r where x.winter = "true")
+return p, length(p) limit 1
