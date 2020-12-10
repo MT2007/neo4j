@@ -1,5 +1,2 @@
-MATCH airport = (airportStop:Airport{name: "DAY"})<-[cheapestFlight:CHEAPEST_FLIGHT*1..6]-(airportStop:Airport {name: "LAX"}), 
-(airportStop:Airport)<-[:DESTINATION]-(), 
-()-[:ORIGIN]->(airportStop:Airport) 
-return airport,reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price)  as cost 
-ORDER BY cost DESC
+MATCH airport=(airportStart:Airport{name: "LAX"})-[cheapestFlight:CHEAPEST_FLIGHT*1..4]-(airportStop:Airport {name: "DAY"}) 
+return airport,reduce(totalPrice=0, rel IN relationships(airport)|totalPrice + rel.price) as cost ORDER BY cost DESC
